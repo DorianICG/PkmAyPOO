@@ -1,16 +1,9 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package CodigoPrincipal;
 
 import java.util.ArrayList;
 import java.util.Scanner;
 
-/**
- *
- * @author Estudiante
- */
 public class Pokedex extends Inventory{
 
     public Pokedex() {
@@ -18,6 +11,7 @@ public class Pokedex extends Inventory{
 
     public Pokedex(int capacity) {
         super(capacity);
+        super.createInventory();
     }
     
     public Interactable pickPkm(){
@@ -31,6 +25,5 @@ public class Pokedex extends Inventory{
             }
         }
         return null;
-             
     }
 }

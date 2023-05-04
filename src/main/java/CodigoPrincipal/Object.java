@@ -1,6 +1,9 @@
 
 package CodigoPrincipal;
 
+import java.util.ArrayList;
+import java.util.Scanner;
+
 public class Object extends Interactable{
     private String typeObject;
 
@@ -23,6 +26,6 @@ public class Object extends Interactable{
     public void setTypeObject(String typeObject) {
         this.typeObject = typeObject;
     }
-    
-    
+
+
 }

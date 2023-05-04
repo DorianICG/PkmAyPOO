@@ -5,6 +5,7 @@
 package CodigoPrincipal;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -12,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Pokemon extends Interactable{
     private Tipo_Pokemon tipoPokemon;
-    private ArrayList<Habilidad> ataques;
+    private ArrayList<Habilidad> ataques = new ArrayList<Habilidad>(4);
     private int vida;
     private int nivel;
 

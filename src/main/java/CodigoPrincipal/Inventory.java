@@ -4,10 +4,9 @@ package CodigoPrincipal;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class Inventory {
+public class Inventory{
     private int capacity;
     private ArrayList<Interactable> objects;
-    private ArrayList<Inventory> inventories = new ArrayList<Inventory>();
     public Inventory() {
     }
 
@@ -34,11 +33,27 @@ public class Inventory {
 
     public void createInventory()
     {
-        int capacityNew;
+        int capacityNew, option =1,newID;
+        String newNameObj;
         Scanner input = new Scanner(System.in);
-        System.out.print("Please, give me a capacity of the backpack: ");
+        System.out.print("Please, write the capacity of the backpack: ");
         capacityNew=input.nextInt();
-        inventories.add(new Inventory(capacityNew));
+        do{
+            do{
+                System.out.print("Select a option\n1-enter an object\n0- exit");
+                option=input.nextInt();
+                if(option>1||option<0)
+                    System.out.print("ERROR\n");
+            }while (option>1||option<0);
+            if(option==1){
+                System.out.print("ID: ");
+                newID = input.nextInt();
+                System.out.print("object name: ");
+                newNameObj = input.next();
+                objects.add(new Interactable(newID,newNameObj));
+                System.out.print("\nCOMPLETED\n");
+            }
+        }while(option!=0);
     }
     
     public void printInventory()
@@ -47,7 +62,7 @@ public class Inventory {
         System.out.print("Join the position for print:" );
         Scanner input = new Scanner(System.in);
         position=input.nextInt();
-        System.out.print("Max Capacity "+inventories.get(position).capacity+"\n");
+        System.out.print("Max Capacity :"+capacity+"\n");
         for(Interactable interact: objects){
             System.out.print("- "+interact.getNameObject()+".\n");
         }
@@ -60,15 +75,33 @@ public class Inventory {
         Scanner input = new Scanner(System.in);
         position=input.nextInt();
         System.out.print("Join the new capacity:" );
-        inventories.get(position).capacity = input.nextInt();
+        capacity = input.nextInt();
     }
     
-    public void removeInventory()
+    public void removeInventory(ArrayList inventories)
     {
         int position;
         System.out.print("Join the position for delete:" );
         Scanner input = new Scanner(System.in);
         position=input.nextInt();
         inventories.remove(position);
+    }
+
+    public boolean check(int id)
+    {
+        for(Interactable object: objects)
+        {
+            if(object.getIdObject()==id) return true;
+        }
+        return false;
+    }
+
+    public boolean check(String name)
+    {
+        for(Interactable object: objects)
+        {
+            if(object.getNameObject().equals(name)) return true;
+        }
+        return false;
     }
 }
