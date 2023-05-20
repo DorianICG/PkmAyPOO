@@ -1,7 +1,5 @@
+package AyPOO_Pkm;
 
-package CodigoPrincipal;
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Pokedex extends Inventory{

@@ -1,5 +1,4 @@
-
-package CodigoPrincipal;
+package AyPOO_Pkm;
 
 class Interactable {
     private int idObject;

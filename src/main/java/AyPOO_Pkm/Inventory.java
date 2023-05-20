@@ -1,5 +1,4 @@
-
-package CodigoPrincipal;
+package AyPOO_Pkm;
 
 import java.util.ArrayList;
 import java.util.Scanner;

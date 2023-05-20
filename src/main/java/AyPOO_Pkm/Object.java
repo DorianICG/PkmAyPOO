@@ -1,8 +1,4 @@
-
-package CodigoPrincipal;
-
-import java.util.ArrayList;
-import java.util.Scanner;
+package AyPOO_Pkm;
 
 public class Object extends Interactable{
     private String typeObject;
