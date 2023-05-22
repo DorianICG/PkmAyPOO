@@ -62,7 +62,7 @@ public class Backpack extends Inventory{
         capacity = 0;
     }
 
-    public boolean useObject(int idObjectUse){
+    public boolean useAnObject(int idObjectUse){
         for(int i=0;i<objects.size();i++){
             if(idObjectUse==objects.get(i).getIdObject()){
                 objects.get(i).useObject();

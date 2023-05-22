@@ -42,7 +42,7 @@ public class Pokedex extends Inventory{
                 newHealth = input.nextInt();
                 System.out.print("level pokemon: ");
                 newLevel = input.nextInt();
-                objects.add(new Pokemon(newTypePkm,newAbilities,newHealth,newLevel,newID,newNamePkm));
+                pokemons.add(new Pokemon(newTypePkm,newAbilities,newHealth,newLevel,newID,newNamePkm));
                 System.out.print("\nCOMPLETED\n");
             }
         }while(option!=0);
